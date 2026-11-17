@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+
+# Local & Vite caches
+.vite/
+*.local
+*.log
+.DS_Store
+Thumbs.db

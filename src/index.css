@@ -1,0 +1,411 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 17px;
+  }
+
+  @media (max-width: 640px) {
+    html {
+      font-size: 16.5px;
+    }
+  }
+
+  body {
+    background-color: rgb(var(--k-0e0c0a));
+    color: rgb(var(--k-f3ece2));
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Unificación cromática global para garantizar estética Minimalista Oscura Cálida en toda la web */
+.bg-slate-950,
+.bg-slate-950\/90,
+.bg-slate-950\/80,
+.bg-slate-950\/60 {
+  background-color: rgb(var(--k-120f0d)) !important;
+}
+
+.bg-slate-900,
+.bg-slate-900\/90,
+.bg-slate-900\/85,
+.bg-slate-900\/80,
+.bg-slate-900\/75,
+.bg-slate-900\/70,
+.bg-slate-900\/60 {
+  background-color: rgb(var(--k-171411)) !important;
+}
+
+.bg-slate-800,
+.bg-slate-800\/80,
+.bg-slate-700 {
+  background-color: rgb(var(--k-241f1a)) !important;
+}
+
+.bg-indigo-950\/25,
+.bg-indigo-950\/30,
+.bg-indigo-950\/50,
+.bg-emerald-950\/20,
+.bg-emerald-950\/30,
+.bg-emerald-950\/40,
+.from-emerald-950\/40 {
+  background-color: rgb(var(--k-1b1713)) !important;
+  background-image: none !important;
+}
+
+.border-slate-800,
+.border-slate-800\/80,
+.border-slate-800\/70,
+.border-slate-800\/60,
+.border-slate-700 {
+  border-color: rgb(var(--k-2b241d) / 0.55) !important;
+}
+
+.text-white,
+.text-slate-100,
+.text-slate-200 {
+  color: rgb(var(--k-f3ece2)) !important;
+}
+
+.text-slate-300,
+.text-indigo-200,
+.text-emerald-200,
+.text-amber-200 {
+  color: rgb(var(--k-d8cfc4)) !important;
+}
+
+.text-slate-400,
+.text-slate-500 {
+  color: rgb(var(--k-9e9285)) !important;
+}
+
+.bg-indigo-600,
+.bg-emerald-600,
+.bg-emerald-500,
+.bg-amber-500,
+.hover\:bg-indigo-600:hover,
+.hover\:bg-emerald-600:hover,
+.hover\:bg-indigo-500:hover,
+.hover\:bg-emerald-500:hover,
+.from-indigo-600,
+.from-emerald-600 {
+  background-color: rgb(var(--k-d6b892)) !important;
+  background-image: none !important;
+  color: rgb(var(--k-14110e)) !important;
+}
+
+.bg-indigo-500\/10,
+.bg-indigo-500\/15,
+.bg-indigo-500\/20,
+.bg-indigo-600\/20,
+.bg-emerald-500\/10,
+.bg-emerald-500\/15,
+.bg-emerald-500\/20,
+.bg-emerald-600\/20,
+.bg-amber-500\/10,
+.bg-amber-500\/15,
+.bg-amber-500\/20,
+.bg-sky-500\/15 {
+  background-color: rgb(var(--k-d6b892) / 0.14) !important;
+}
+
+.text-indigo-400,
+.text-indigo-300,
+.text-emerald-400,
+.text-emerald-300,
+.text-sky-400,
+.text-sky-300,
+.text-amber-400,
+.text-amber-300 {
+  color: rgb(var(--k-d6b892)) !important;
+}
+
+.border-indigo-500,
+.border-indigo-500\/50,
+.border-indigo-500\/40,
+.border-indigo-500\/30,
+.border-indigo-500\/20,
+.border-emerald-500\/50,
+.border-emerald-500\/40,
+.border-emerald-500\/30,
+.border-emerald-500\/20,
+.border-amber-500\/40,
+.border-amber-500\/30,
+.border-sky-500\/30 {
+  border-color: rgb(var(--k-d6b892) / 0.18) !important;
+}
+
+@layer utilities {
+  .font-editorial {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .campus-surface {
+    background: linear-gradient(145deg, rgb(var(--k-1d1915) / 0.96) 0%, rgb(var(--k-13100d) / 0.99) 100%);
+    border: 1px solid rgb(var(--k-d6b892) / 0.14);
+  }
+
+  .campus-surface-hover {
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .campus-surface-hover:hover {
+    border-color: rgb(var(--k-d6b892) / 0.25);
+    background: linear-gradient(145deg, rgb(var(--k-241f1a) / 0.98) 0%, rgb(var(--k-191512) / 1) 100%);
+    transform: translateY(-1px);
+  }
+
+  .campus-tool-card {
+    background:
+      radial-gradient(120% 100% at 95% 0%, rgb(var(--k-d6b892) / 0.13) 0%, rgb(var(--k-d6b892) / 0.03) 45%, rgb(var(--k-161310) / 0.97) 100%),
+      linear-gradient(160deg, rgb(var(--k-1d1814)) 0%, rgb(var(--k-14110e)) 100%);
+    border: 1px solid rgb(var(--k-d6b892) / 0.14);
+  }
+  .campus-tool-card:hover {
+    border-color: rgb(var(--k-d6b892) / 0.26);
+  }
+
+  .campus-folder-card {
+    background-color: rgb(var(--k-14110e));
+    border: 1px solid rgb(var(--k-d6b892) / 0.18);
+    box-shadow: 0 4px 18px -8px rgba(0, 0, 0, 0.45);
+  }
+
+  .campus-folder-header {
+    background: linear-gradient(180deg, rgb(var(--k-231e19) / 0.94) 0%, rgb(var(--k-1b1713) / 0.96) 100%);
+  }
+  .campus-folder-header:hover {
+    background: linear-gradient(180deg, rgb(var(--k-2a231d) / 0.98) 0%, rgb(var(--k-211c17) / 0.98) 100%);
+  }
+
+  .campus-folder-files-well {
+    background-color: rgb(var(--k-0e0c0a) / 0.92);
+    border-top: 1px solid rgb(var(--k-d6b892) / 0.16);
+  }
+
+  .campus-file-row:nth-child(odd) {
+    background-color: rgb(var(--k-120f0d) / 0.94);
+  }
+  .campus-file-row:nth-child(even) {
+    background-color: rgb(var(--k-1a1612) / 0.96);
+  }
+  .campus-file-row:hover {
+    background-color: rgb(var(--k-26211c) / 0.92);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgb(var(--k-120f0c) / 0.7);
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(var(--k-d6b892) / 0.25);
+    border-radius: 9999px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--k-d6b892) / 0.45);
+  }
+}
+
+
+/* Paleta base por defecto (Arena Dorada). Generado: 169 colores. Las paletas alternativas sobreescriben estas variables desde src/theme/palettes.ts */
+:root {
+  --k-0c0a08: 12 10 8;
+  --k-0e0c0a: 14 12 10;
+  --k-100d0b: 16 13 11;
+  --k-110e0b: 17 14 11;
+  --k-120f0c: 18 15 12;
+  --k-120f0d: 18 15 13;
+  --k-12100d: 18 16 13;
+  --k-13100d: 19 16 13;
+  --k-131810: 19 24 16;
+  --k-14110e: 20 17 14;
+  --k-15120f: 21 18 15;
+  --k-161310: 22 19 16;
+  --k-171310: 23 19 16;
+  --k-171411: 23 20 17;
+  --k-181410: 24 20 16;
+  --k-181411: 24 20 17;
+  --k-181512: 24 21 18;
+  --k-191410: 25 20 16;
+  --k-191512: 25 21 18;
+  --k-1a1612: 26 22 18;
+  --k-1a1613: 26 22 19;
+  --k-1b140d: 27 20 13;
+  --k-1b1713: 27 23 19;
+  --k-1c1713: 28 23 19;
+  --k-1c1814: 28 24 20;
+  --k-1d160e: 29 22 14;
+  --k-1d1814: 29 24 20;
+  --k-1d1915: 29 25 21;
+  --k-1e1915: 30 25 21;
+  --k-1e1a16: 30 26 22;
+  --k-1e281d: 30 40 29;
+  --k-1f170f: 31 23 15;
+  --k-1f1a15: 31 26 21;
+  --k-1f291e: 31 41 30;
+  --k-201b16: 32 27 22;
+  --k-211911: 33 25 17;
+  --k-211c17: 33 28 23;
+  --k-221d18: 34 29 24;
+  --k-222a1d: 34 42 29;
+  --k-231d17: 35 29 23;
+  --k-231e19: 35 30 25;
+  --k-241e19: 36 30 25;
+  --k-241f1a: 36 31 26;
+  --k-251f1a: 37 31 26;
+  --k-25201b: 37 32 27;
+  --k-261f18: 38 31 24;
+  --k-26201a: 38 32 26;
+  --k-26211c: 38 33 28;
+  --k-27211c: 39 33 28;
+  --k-29231d: 41 35 29;
+  --k-2a231c: 42 35 28;
+  --k-2a231d: 42 35 29;
+  --k-2b2218: 43 34 24;
+  --k-2b231c: 43 35 28;
+  --k-2b241d: 43 36 29;
+  --k-2c241d: 44 36 29;
+  --k-2c251e: 44 37 30;
+  --k-2d261f: 45 38 31;
+  --k-2e2720: 46 39 32;
+  --k-302518: 48 37 24;
+  --k-312a23: 49 42 35;
+  --k-332719: 51 39 25;
+  --k-332b23: 51 43 35;
+  --k-332b24: 51 43 36;
+  --k-33402c: 51 64 44;
+  --k-34a853: 52 168 83;
+  --k-362e26: 54 46 38;
+  --k-362f28: 54 47 40;
+  --k-382b1c: 56 43 28;
+  --k-382c1e: 56 44 30;
+  --k-382e24: 56 46 36;
+  --k-383028: 56 48 40;
+  --k-3a3027: 58 48 39;
+  --k-3a3128: 58 49 40;
+  --k-3b3229: 59 50 41;
+  --k-3d3329: 61 51 41;
+  --k-3d332a: 61 51 42;
+  --k-4285f4: 66 133 244;
+  --k-495c3f: 73 92 63;
+  --k-4a3e33: 74 62 51;
+  --k-4c3a26: 76 58 38;
+  --k-4f4439: 79 68 57;
+  --k-52473c: 82 71 60;
+  --k-534029: 83 64 41;
+  --k-544a40: 84 74 64;
+  --k-5a452d: 90 69 45;
+  --k-5b4d3e: 91 77 62;
+  --k-5e4931: 94 73 49;
+  --k-5f7852: 95 120 82;
+  --k-6b5e50: 107 94 80;
+  --k-6e563b: 110 86 59;
+  --k-725739: 114 87 57;
+  --k-766b5f: 118 107 95;
+  --k-785f43: 120 95 67;
+  --k-786b5e: 120 107 94;
+  --k-7a966b: 122 150 107;
+  --k-7e613d: 126 97 61;
+  --k-886843: 136 104 67;
+  --k-8c7a67: 140 122 103;
+  --k-8c7f72: 140 127 114;
+  --k-8e8275: 142 130 117;
+  --k-8f6f49: 143 111 73;
+  --k-94734c: 148 115 76;
+  --k-948470: 148 132 112;
+  --k-96b087: 150 176 135;
+  --k-9e8c78: 158 140 120;
+  --k-9e9285: 158 146 133;
+  --k-a38052: 163 128 82;
+  --k-a39688: 163 150 136;
+  --k-a89b8c: 168 155 140;
+  --k-a9c79e: 169 199 158;
+  --k-ad885b: 173 136 91;
+  --k-b28f64: 178 143 100;
+  --k-b38f63: 179 143 99;
+  --k-b3c5a7: 179 197 167;
+  --k-b5a38e: 181 163 142;
+  --k-b7d1b0: 183 209 176;
+  --k-b8aca0: 184 172 160;
+  --k-b9a88e: 185 168 142;
+  --k-bda98c: 189 169 140;
+  --k-be9a6b: 190 154 107;
+  --k-bfb09c: 191 176 156;
+  --k-c6a276: 198 162 118;
+  --k-c7a67d: 199 166 125;
+  --k-c8a77d: 200 167 125;
+  --k-c8ab86: 200 171 134;
+  --k-c8b89e: 200 184 158;
+  --k-c8bcb0: 200 188 176;
+  --k-cbbba5: 203 187 165;
+  --k-d1b084: 209 176 132;
+  --k-d1dcc9: 209 220 201;
+  --k-d5c8b6: 213 200 182;
+  --k-d6b892: 214 184 146;
+  --k-d7c7af: 215 199 175;
+  --k-d8cfc4: 216 207 196;
+  --k-dcc199: 220 193 153;
+  --k-dfc5a1: 223 197 161;
+  --k-dfd1bc: 223 209 188;
+  --k-dfd3c3: 223 211 195;
+  --k-e0c99b: 224 201 155;
+  --k-e2c6a1: 226 198 161;
+  --k-e2c8a6: 226 200 166;
+  --k-e2d8c9: 226 216 201;
+  --k-e2d9cb: 226 217 203;
+  --k-e3c7a3: 227 199 163;
+  --k-e4d6c3: 228 214 195;
+  --k-e4dacd: 228 218 205;
+  --k-e5c29f: 229 194 159;
+  --k-e5c9a4: 229 201 164;
+  --k-e5d5c0: 229 213 192;
+  --k-e6d7c3: 230 215 195;
+  --k-e8d6b9: 232 214 185;
+  --k-e8ede4: 232 237 228;
+  --k-ea4335: 234 67 53;
+  --k-eadac2: 234 218 194;
+  --k-ecdec0: 236 222 192;
+  --k-efe5d4: 239 229 212;
+  --k-f2ebe1: 242 235 225;
+  --k-f3ece2: 243 236 226;
+  --k-f4ebdc: 244 235 220;
+  --k-f5ede0: 245 237 224;
+  --k-f5efe6: 245 239 230;
+  --k-f6efe0: 246 239 224;
+  --k-f6f8f4: 246 248 244;
+  --k-faf6f0: 250 246 240;
+  --k-faf7f2: 250 247 242;
+  --k-fbbc05: 251 188 5;
+  --k-fbf8f3: 251 248 243;
+  --k-fcf9f2: 252 249 242;
+}
+
+/* =========================================================================
+   Bordes y líneas suaves (menos contraste entre bloques)
+   - Color de borde por defecto translúcido (también afecta bordes sin clase de color).
+   - Todo borde con token "k-<hex>" sin modificador de opacidad se muestra al 55%.
+   - Divisores (divide-*) también atenuados.
+   ========================================================================= */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: rgb(var(--k-312a23) / 0.65);
+  }
+}
+
+[class*="border-k-"] {
+  --tw-border-opacity: 0.78;
+}
+
+[class*="divide-k-"] > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 0.72;
+}
+
+hr {
+  border-color: rgb(var(--k-312a23) / 0.65);
+}
